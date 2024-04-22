@@ -8,13 +8,13 @@ import { ChatForm } from '../components/ChatForm';
 
 
 const PokemonChat = () => {
-  const [pokemon, setPokemon] = useState([1, 2, 3]);
+  const [pokemon, setPokemon] = useState([]);
 
   return (
     <div className="CenteredTopLayout">
       <div className="results">
         {pokemon.length === 0 ? <p>Loading...</p> : null}
-        {pokemon.map((pokemonID, key) => { 
+        {Array.isArray(pokemon) && pokemon.map((pokemonID, key) => { 
           return <PokemonCard pokemonID={pokemonID} key={key}></PokemonCard>;
         })}
       </div>

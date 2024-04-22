@@ -40,7 +40,7 @@ def strongest():
         },
         {
             "role": "user",
-            "content": "Strongest pokemon"
+            "content": query,
         },
         {
             "role": "assistant",
